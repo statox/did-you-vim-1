@@ -7,7 +7,7 @@ endif
 " plugin version
 let g:did_you_vim_version = 0.1
 
-" get a random number using the bach $RANDOM function
+" get a random number using an external shell function
 " http://vi.stackexchange.com/a/819/1821
 function! GetRandomNumber()
     if has('win32')
@@ -32,8 +32,7 @@ function! s:GetRandomTag()
 	" http://stackoverflow.com/a/22891311/2558252
 	sview $VIMRUNTIME/doc/tags
 
-	" get the total number tof tags in the tag file
-	" :h line
+	" get the total number of tags in the tag file
 	let tagsNumber = line('$')
 
 	" get a valid random tag number
